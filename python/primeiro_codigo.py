@@ -1,11 +1,11 @@
-"""
-MEU PRIMEIRO CÓDIGO EM PYTHON
-Autor: João
-Data: 18/11/2025
-"""
+# """
+# MEU PRIMEIRO CÓDIGO EM PYTHON
+# Autor: João
+# Data: 18/11/2025
+# """
 
-# 1. COMENTARIOS - SÃO LINHAS QUE NÃO SÃO EXECUTADAS PELO INTERPRETADOR
-# ESTE É UM COMENTÁRIO DE UMA LINHA
+# # 1. COMENTARIOS - SÃO LINHAS QUE NÃO SÃO EXECUTADAS PELO INTERPRETADOR
+# # ESTE É UM COMENTÁRIO DE UMA LINHA
 print("=== INICIANDO NOSSO PROGRAMA ===")
 
 #2. FUNÇÕES PRINT - mostra mensagens na tela
@@ -139,8 +139,25 @@ print (n1 / n2)
 
 celsius = float(input("digite a temperatura em celsius:"))
 fahrenheit = celsius * 1.8 + 32
-print (f"{celsius}°C = ")
+print (f"{celsius}°C = {fahrenheit}°F")
 
 nome = str(input("Digite seu nome:"))
 sobrenome = str(input("Digite seu sobrenome:"))
-print("seu nome nickname é:", {nome[0:1] , sobrenome [0:1]})
+nickname = nome[:3] + sobrenome [:3] 
+print(f"seu nome nickname é:{nickname}")
+
+nome = str(input("Digite seu nome:"))
+salario = float (input("Digite seu salario: "))
+idade = int(input("Digite sua idade: "))
+
+# print(f"""
+#     Relatorio Final:
+#     Nome: {nome}
+#     Salario: {salario}
+#     idade: {idade}
+# """)
+
+print("Relatorio Final:")
+print(f"Nome:{nome}")
+print(f"Salario: {salario}")
+print(f"Idade: {idade}")
