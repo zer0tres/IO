@@ -161,3 +161,4 @@ print("Relatorio Final:")
 print(f"Nome:{nome}")
 print(f"Salario: {salario}")
 print(f"Idade: {idade}")
+
