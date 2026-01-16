@@ -300,15 +300,91 @@
 
 #TESTES
 
-# print("\n"+"-"*50)
+# print("\n"+"="*50)
 # print("CONTADOR AUTOMATICO")
+# print("="*50)
+
+# inicio = int(input("Início: "))
+# fim = int(input("Fim:"))
+# passo = int(input("Step:"))
+
+# print(f"\nContagem de {inicio} até {fim} de {passo} em {passo}:")
+
+# if passo > 0:
+#     for i in range(inicio, fim + 1, passo):
+#         print(f" {i}")
+# else:
+#     for i in range(inicio, fim -1, passo):
+#         print(f" {i}")
+
+# print("Contagem finalizada!")
+
+
+
+
+# print("\n" + "-" *50)
+# print("Validador de senha")
+# print("-" *50)
+# senha_correta = "segura2024"
+# tentativas = 3
+# acertou = False
+
+# while tentativas > 0 and not acertou:
+#     senha = input(f"Digite a senha! \n ({tentativas}: tentativas restantes):")
+
+#     if senha == senha_correta:
+#         print("Acesso permitido!")
+#         acertou = True
+#     else:
+#         print("\nSenha incorreta!\n")
+#         tentativas -= 1
+
+# if not acertou:
+#     print("Acesso bloqueado!")
+
+
+# print("\n"+"-"*50)
+# print("Criação de senha segura")
 # print("-"*50)
 
-# for i in range (1,41,2):
-#     print(f"{i}","\n", end= "") 
+# continuar = True
+# while continuar:
+#         nova_senha = input("\n Digite uma nova senha:")
+#         if (len(nova_senha) >= 8 and
+#             any(char.isdigit() for char in nova_senha) and
+#             any(not char.isalnum() for char in nova_senha)):
+#             print("Senha criada com sucesso!")
+#             continuar = False
+#         else:
+#             print("Senha fraca! Tente novamente.") 
 
-# print("contagem finalizada!")
+print("\n"+"="*50)
+print("outro validador de senha")
+print("="*50)
+continuar = True
+while continuar:
+    senha= input("Digite uma senha:")
 
-print("\n" + "-" *50)
-print("Validador de senha")
-print("")
+    tem_maiuscula = False
+    tem_numero = False
+    tem_simbolo = False
+
+    for caractere in senha:
+        if caractere.isupper():
+              tem_maiuscula = True
+        if caractere.isdigit():
+              tem_numero = True
+        if caractere in "!@#$%^&*()-_=+[]{};:,.<>?/":
+              tem_simbolo = True
+    
+    if len(senha) < 8:
+         print("Senha muito curta! Deve ter pelo menos 8 caracteres.")
+    elif not tem_maiuscula:
+         print("Necessita de pelo menos uma letra maiuscula.")
+    elif not tem_numero:
+         print("Necessita de pelo menos um numero.")
+    elif not tem_simbolo:
+         print("Necessita de pelo menos um simbolo especial.")
+    else:
+         print("Senha criada com sucesso!")
+         continuar = False
